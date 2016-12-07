@@ -46,7 +46,7 @@ namespace ProjectEuler
                 int n1 = 1;
                 int n2 = 2;
                 int fib = 3;
-                for(int i = 3; i < n; i++)
+                for (int i = 3; i < n; i++)
                 {
                     n1 = n2;
                     n2 = fib;
@@ -74,6 +74,40 @@ namespace ProjectEuler
             {
                 return (FibonacciRecursive(n - 1) + FibonacciRecursive(n - 2));
             }
+        }
+
+        public static bool IsAFactorOfB(int a, int b)
+        {
+            return a < b && b % a == 0;
+        }
+
+        public static bool IsPrime(int n)
+        {
+            if (n <= 1)
+            {
+                return false;
+            }
+            else if (n <= 3)
+            {
+                return true;
+            }
+            else if (n % 2 == 0 || n % 3 == 0)
+            {
+                return false;
+            }
+            else
+            {
+                int i = 5;//let i ← 5
+                while (i * i <= n)//while i×i ≤ n
+                {
+                    if (n % i == 0 || n % (i + 2) == 0)
+                    {
+                        return false;
+                    }
+                    i += 6;
+                }
+            }
+            return true;
         }
     }
 }
