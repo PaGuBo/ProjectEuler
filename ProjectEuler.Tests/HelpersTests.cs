@@ -45,5 +45,28 @@ namespace ProjectEuler.Tests
             Assert.IsFalse(Helpers.IsPrime(1000));
         }
 
+        [TestMethod()]
+        public void IsPalindromeTest_abba()
+        {
+            Assert.IsTrue(Helpers.IsPalindrome("abba"));
+        }
+
+        [TestMethod()]
+        public void IsPalindromeTest_123321()
+        {
+            Assert.IsTrue(Helpers.IsPalindrome(123321));
+        }
+
+        [TestMethod()]
+        public void IsPalindromeTest_123322()
+        {
+            Assert.IsFalse(Helpers.IsPalindrome(123322));
+        }
+
+        [TestMethod()]
+        public void IsPalindromeTest_1230321()
+        {
+            Assert.IsTrue(Helpers.IsPalindrome(1230321));
+        }
     }
 }

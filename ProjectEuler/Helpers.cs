@@ -109,5 +109,30 @@ namespace ProjectEuler
             }
             return true;
         }
+
+        public static bool IsPalindrome(string input)
+        {
+            var length = input.Length;
+            if (length == 1)
+            {
+                return false;
+            }
+            else
+            {
+                for (int i = 0; i < length / 2; i++)
+                {
+                    if (input[i] != input[length - 1 - i])
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+        }
+        public static bool IsPalindrome(int n)
+        {
+            return IsPalindrome(n.ToString());
+        }
     }
 }
