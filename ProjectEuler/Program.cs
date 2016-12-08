@@ -18,7 +18,9 @@ namespace ProjectEuler
             //Console.Write(Problem006.Solve());
             //Console.Write(Problem007.Solve());
             //Console.Write(Problem008.Solve());
-            Console.Write(Problem009.Solve());
+            //Console.Write(Problem009.Solve());
+            //Console.Write(Problem10.Solve());
+            Console.Write(Problem11.Solve());
             Console.ReadLine();
         }
     }
