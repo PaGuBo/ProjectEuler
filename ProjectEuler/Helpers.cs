@@ -76,7 +76,7 @@ namespace ProjectEuler
             }
         }
 
-        public static bool IsAFactorOfB(int a, int b)
+        public static bool IsAFactorOfB(long a, long b)
         {
             return a < b && b % a == 0;
         }
@@ -97,8 +97,8 @@ namespace ProjectEuler
             }
             else
             {
-                int i = 5;//let i ← 5
-                while (i * i <= n)//while i×i ≤ n
+                int i = 5;
+                while (i * i <= n)
                 {
                     if (n % i == 0 || n % (i + 2) == 0)
                     {
